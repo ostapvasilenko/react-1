@@ -3,9 +3,12 @@ import styles from "../styles/Reactproject.module.css";
 
 const Student = () => {
   let [counter, setCounter] = useState(0);
+  let [surname, setSurname] = useState('');
+  let [name, setName] = useState('');
+  let [fathername, setFathername] = useState('');
+  let [email, setEmail] = useState('');
 
   return (
-    <>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -25,14 +28,31 @@ const Student = () => {
               Add +1
             </div>
             <h2>Result: {counter}</h2>
-            <form action="">
-                <input type="text" placeholder="Name"/>
-                <input type="email" placeholder="Email"/>
+            <form>
+                <input onChange={(e) => {setSurname(e.target.value) }} type="text" placeholder="Surname"/>
+                <input onChange={(e) => {setName(e.target.value) }} type="text" placeholder="Name"/>
+                <input onChange={(e) => {setFathername(e.target.value) }} type="text" placeholder="Fathername"/>
+                <input onChange={(e) => {setEmail(e.target.value) }} type="text" placeholder="Email"/>
+                <input type="submit" value="Submit"/>
             </form>
+            <h2>
+                {surname}
+            </h2>
+
+            <h2>
+                {name}
+            </h2>
+
+            <h2>
+                {fathername}
+            </h2>
+
+            <h2>
+                {email}
+            </h2>
           </div>
         </div>
       </div>
-    </>
   );
 };
 
