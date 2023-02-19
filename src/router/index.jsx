@@ -14,6 +14,7 @@ const RouterApp = () => {
       <Route path="/student" element={<StudentPage />}></Route>
       <Route path="/reactproject" element={<Reactproject />}></Route>
       <Route exact path="/posts" element={<Posts />}></Route>
+      <Route path="/" element={<Reactproject />}></Route>
     </Routes>
   );
 };

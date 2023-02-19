@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Reactproject.module.css";
+import PostCards from "../styles/PostCards.css";
 
 const Student = () => {
   let [counter, setCounter] = useState(0);
@@ -7,7 +8,17 @@ const Student = () => {
   let [name, setName] = useState('');
   let [fathername, setFathername] = useState('');
   let [email, setEmail] = useState('');
+  let [posts, setPosts] = useState([]);
+  
+async function getPosts(){
+  const DATA = await('https://jsonplaceholder.typicode.com/todos/1')
+      .then((res) => res.json())
+      .then(data) => {
+        return(data)
+      });
 
+      set Post (DATA)
+}
   return (
       <div className="container">
         <div className="row">
@@ -50,6 +61,9 @@ const Student = () => {
             <h2>
                 {email}
             </h2>
+
+            <button onClick={getPosts}>Click</button>
+
           </div>
         </div>
       </div>
