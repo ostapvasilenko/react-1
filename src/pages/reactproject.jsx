@@ -11,6 +11,8 @@ const Student = () => {
   let [title, setTitle] = useState('');
   let [text, setText] = useState('');
 
+  
+
   return (
     <div className="container">
       <div className="row">
@@ -34,7 +36,7 @@ const Student = () => {
           <form className="d-flex">
             <input onChange={(e) => { setTitle(e.target.value) }} type="text" placeholder="Title" />
             <textarea onChange={(e) => { setText(e.target.value) }} type="text" placeholder="Text" />
-            <button>ADD</button>
+            <button onClick type="submit">ADD</button>
           </form>
           {
           }
