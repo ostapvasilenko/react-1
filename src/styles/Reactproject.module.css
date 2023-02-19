@@ -16,3 +16,12 @@ button{
 .button{
     margin-left: 0px;
 }
+
+input{
+    border: 2px solid red;
+    padding: 10px;
+}
+textarea{
+    border: 2px solid red;
+    padding: 10px;
+}
